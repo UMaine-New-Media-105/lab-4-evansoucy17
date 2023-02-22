@@ -1,0 +1,37 @@
+//Assignment 4.3
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background (220)
+  frogClone(0, 0, 1);
+}
+
+function frogClone(x, y, size) {
+  if (mouseIsPressed) {
+    translate(x, y);
+    scale(size);
+    noStroke(0);
+    fill("red"); //courasaunt guard
+    //batallion color
+    triangle(50, 0, 200, 400, 350, 0);
+
+    //visor
+    fill("black");
+    rect(50, 50, 300, 75);
+    rect(150, 50, 90, 225);
+    triangle(200, 220, 400, 380, 200, 310);
+    triangle(200, 220, 0, 380, 200, 310);
+  } else {   
+    fill("green");
+    ellipse(200, 200, 200, 100);//head
+    fill("black");
+    ellipse(150, 160, 50, 50);//left eye
+    ellipse(250, 160, 50, 50);//right eye
+    fill("white");
+    ellipse(200, 225, 100, 25);//mouth
+ 
+    
+  }
+}
